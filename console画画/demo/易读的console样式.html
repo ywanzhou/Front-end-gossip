@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>易读的console样式</title>
+</head>
+
+<body>
+    <script>
+        // 将 CSS 属性放置数组内，通过 join 拼接为一个字符串
+        const styles = [
+            'color: red',
+            'background: yellow',
+            'font-size: 24px',
+        ].join(';')
+        console.log('%cHello 一碗周', styles)
+    </script>
+</body>
+
+</html>
