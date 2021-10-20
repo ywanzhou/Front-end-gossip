@@ -183,7 +183,7 @@ window.open(strUrl, strWindowName, [strWindowFeatures])
 
 - `Location.href`属性一般用于页面的迭代，也就是重新定位当前页
 
-- `window.open()`方法是可以在一个网站上打开另外的一个网站的地址，而`location.href`属性只能在一个网站中打开本网站的网页
+- `window.open()`方法可以通过新开窗口或者说新开标签页打开一个网址，而`location.href`属性只能在当前页打开一个网址。
 
 ## 写在最后
 
