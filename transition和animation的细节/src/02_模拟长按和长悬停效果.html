@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>模拟长按和长悬停效果</title>
+    <style>
+      button {
+        appearance: none;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        white-space: nowrap;
+        line-height: 40px;
+        width: 80px;
+        height: 40px;
+        color: #fff;
+        background-color: #1171ee;
+        border-radius: 4px;
+      }
+      button.active {
+        transition: background-color 1s;
+      }
+      .active:hover {
+        background: #3683e9;
+      }
+      button:active {
+        background: #0d65d8;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="btn1">悬停</button>
+  </body>
+  <script>
+    const $btn1 = document.getElementById('btn1')
+    function addClass(e) {
+      event.target.setAttribute('class', 'active')
+    }
+    function removeClass(e) {
+      event.target.setAttribute('class', '')
+    }
+    function AddListener() {
+      console.log('延迟了1s触发')
+    }
+    $btn1.addEventListener('mouseenter', addClass)
+    $btn1.addEventListener('mouseleave', removeClass)
+    $btn1.addEventListener('transitionend', AddListener)
+  </script>
+</html>
