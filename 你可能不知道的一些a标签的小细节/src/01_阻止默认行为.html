@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>阻止默认行为</title>
+  </head>
+  <body>
+    <!-- 通过 href 实现点击无跳转 -->
+    <a href="javascript:;">a标签</a>
+    <a href="javascript:void(0);">a标签</a>
+    <!-- 通过事件阻止默认行为 -->
+    <a href="https://juejin.cn" onclick="return false">掘金</a>
+    <a href="https://juejin.cn" id="link">掘金</a>
+    <script>
+      const $a = document.getElementById('link')
+      $a.addEventListener('click', e => {
+        e.preventDefault()
+      })
+    </script>
+  </body>
+</html>
