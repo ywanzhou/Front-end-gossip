@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>实现四点布局 - 一碗周</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      .warp {
+        display: flex;
+        margin: 100px auto;
+        height: 300px;
+        width: 300px;
+        border-radius: 28px;
+        background: #f7f7f7;
+        box-shadow: inset 7px 7px 14px #dedede, inset -7px -7px 14px #f0f0f0;
+        /* 实现 二点 布局 */
+        /* 将主轴修改为垂直 */
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .column {
+        display: flex;
+        justify-content: space-between;
+      }
+      .pip {
+        display: block;
+        width: 58px;
+        height: 58px;
+        border-radius: 50%;
+        margin: 21px;
+        background-color: #333;
+        box-shadow: inset 0 3px #111, inset 0 -3px #555;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="warp">
+      <div class="column">
+        <div class="pip"></div>
+        <div class="pip"></div>
+      </div>
+      <div class="column">
+        <div class="pip"></div>
+        <div class="pip"></div>
+      </div>
+    </div>
+  </body>
+</html>
